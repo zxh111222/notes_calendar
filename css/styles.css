@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.calendars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.month {
+    margin: 10px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.highlight {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.green-highlight {
+    background-color: green;
+    cursor: pointer;
+    color: white; /* 确保文本在绿色背景上可见 */
+}
