@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             for (let j = 0; j < 7; j++) { // 7列
                 const cell = document.createElement('td');
-                if (i === 0 && j < new Date(2024, monthIndex, 1).getDay()) {
+                if (i === 0 && j < new Date(2024, monthIndex, 0).getDay()) {
                     cell.innerHTML = "";
                 } else if (date > days) {
                     break;
