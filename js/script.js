@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "五月": [8, 10, 12, 25, 31],
         "六月": [2, 5],
         "七月": [29, 30],
-        "八月": [1, 2],
-        // 添加其他月份的高亮日期
+        "八月": [1, 2, 5],
+        // 添加其他月份的有md笔记的日期
     };
 
     const greenHighlightDates = {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "四月": [20, 24],
         "五月": [15, 22, 24, 29],
         "六月": [7],
-        // 添加其他月份的绿色高亮日期
+        // 添加其他月份的绿色有上课日期
     };
 
     const months = [
@@ -50,16 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     const year = 2024;
                     const month = (monthIndex + 1).toString().padStart(2, '0');
                     const day = date.toString().padStart(2, '0');
+                    const fullDate = new Date(year, monthIndex, date);
 
-                    if (highlightDates[monthName] && highlightDates[monthName].includes(date)) {
-                        cell.classList.add('highlight');
-                        const link = `https://github.com/zxh111222/javaProject/tree/master/src/day${year}${month}${day}/md`;
-                        cell.addEventListener('click', () => {
-                            window.open(link, '_blank');
-                        });
-                    } else if (greenHighlightDates[monthName] && greenHighlightDates[monthName].includes(date)) {
-                        cell.classList.add('green-highlight');
-                        const link = `https://github.com/zxh111222/javaProject/tree/master/src/day${year}${month}${day}`;
+                    const highlight = highlightDates[monthName] && highlightDates[monthName].includes(date);
+                    const greenHighlight = greenHighlightDates[monthName] && greenHighlightDates[monthName].includes(date);
+                    const isAfterAug5 = fullDate >= new Date(2024, 7, 5); // 比较日期是否在2024年8月5日之后（包括当日）
+
+                    if (highlight || greenHighlight) {
+                        let link;
+                        if (isAfterAug5) {
+                            link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
+                            if (highlight) {
+                                link += '/md';
+                            }
+                        } else {
+                            link = `https://github.com/zxh111222/javaProject/tree/master/src/day${year}${month}${day}`;
+                            if (highlight) {
+                                link += '/md';
+                            }
+                        }
+                        cell.classList.add(highlight ? 'highlight' : 'green-highlight');
                         cell.addEventListener('click', () => {
                             window.open(link, '_blank');
                         });
