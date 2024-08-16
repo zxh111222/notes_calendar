@@ -43,12 +43,29 @@ th, td {
 }
 
 .highlight {
-    background-color: yellow;
+    background-color: #ffeb3b;
     cursor: pointer;
+}
+highlight:hover {
+    background-color: #fdd835;
 }
 
 .green-highlight {
-    background-color: green;
+    background-color: rgb(107, 201, 107);
     cursor: pointer;
     color: white;
+}
+
+.green-highlight:hover {
+    background-color: rgb(76, 185, 76);
+    cursor: pointer;
+    color: white;
+}
+
+.web1-highlight {
+    background-color: gray;
+    cursor: pointer;
+}
+.web1-highlight:hover {
+    background-color: dimgray;
 }
