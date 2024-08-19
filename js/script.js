@@ -67,16 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         let link;
                         if (highlight_web1) {
                             link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
-                        }
-                        if (isAfterAug5) {
-                            link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
-                            if (highlight) {
-                                link += '/md';
-                            }
                         } else {
-                            link = `https://github.com/zxh111222/javaProject/tree/master/src/day${year}${month}${day}`;
-                            if (highlight) {
-                                link += '/md';
+                            if (isAfterAug5) {
+                                link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
+                                if (highlight) {
+                                    link += '/md';
+                                }
+                            } else {
+                                link = `https://github.com/zxh111222/javaProject/tree/master/src/day${year}${month}${day}`;
+                                if (highlight) {
+                                    link += '/md';
+                                }
                             }
                         }
                         if (highlight) {
