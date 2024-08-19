@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (highlight || greenHighlight || highlight_web1) {
                         let link;
+                        if (highlight_web1) {
+                            link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
+                        }
                         if (isAfterAug5) {
                             link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
                             if (highlight) {
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else if (highlight_web1) {
                             cell.classList.add('web1-highlight');
                             cell.addEventListener('click', () => {
-                                alert("待补充 - Web 1.0 阶段 (html + css +js)")
+                                window.open(link, '_blank');
                             });
                         }
                     }
