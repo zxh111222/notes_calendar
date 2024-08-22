@@ -66,6 +66,7 @@ highlight:hover {
     background-color: gray;
     cursor: pointer;
 }
+
 .web1-highlight:hover, .web2-highlight:hover {
     background-color: dimgray;
 }
