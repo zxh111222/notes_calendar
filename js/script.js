@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightDates = {
         "三月": [21, 22, 24],
         "四月": [20, 24],
-        "五月": [8, 10, 12, 25, 31],
+        "五月": [8, 10, 15, 12, 25, 31],
         "六月": [2, 5],
         "七月": [29, 30],
         "八月": [1, 2, 5, 6, 8, 9, 10, 12, 13, 15, 16, 19, 20],
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const greenHighlightDates = {
-        "五月": [15, 22, 24, 29],
+        "五月": [22, 24, 29],
         "六月": [7],
         "八月": [],
         // 添加其他月份的绿色有上课日期
