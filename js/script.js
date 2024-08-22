@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "五月": [8, 10, 12, 25, 31],
         "六月": [2, 5],
         "七月": [29, 30],
-        "八月": [1, 2, 5, 6, 8, 9, 10, 12, 13, 15, 16, 19],
+        "八月": [1, 2, 5, 6, 8, 9, 10, 12, 13, 15, 16, 19, 20],
         // 添加其他月份的有md笔记的日期
     };
 
@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightDatesWeb1 = {
         "三月": [29, 31],
         "四月": [10, 12, 14, 17, 19]
+    };
+
+    const highlightDatesWeb2 = {
+        "八月": [22]
     };
 
     const months = [
@@ -63,10 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const highlight_web1 = highlightDatesWeb1[monthName] && highlightDatesWeb1[monthName].includes(date);
                     const isAfterAug5 = fullDate >= new Date(2024, 7, 5); // 比较日期是否在2024年8月5日之后（包括当日）
 
-                    if (highlight || greenHighlight || highlight_web1) {
+                    if (highlight || greenHighlight || highlight_web1 || highlightDatesWeb2) {
                         let link;
                         if (highlight_web1) {
                             link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
+                        } else if (highlightDatesWeb2){
+                            link = `https://github.com/zxh111222/web2-myserver/tree/main/day${year}${month}${day}` + '/md';
                         } else {
                             if (isAfterAug5) {
                                 link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
