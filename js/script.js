@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (highlight_web1) {
                             link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
                         } else if (highlight_web2){
-                            link = `https://github.com/zxh111222/web2-myserver/tree/main/day${year}${month}${day}` + '/md';
+                            link = `https://github.com/zxh111222/web2-myserver/tree/main/src/main/java/day${year}${month}${day}` + '/md';
                         } else {
                             if (isAfterAug5) {
                                 link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
