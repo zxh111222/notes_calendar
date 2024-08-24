@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const highlightDatesWeb2 = {
-        "八月": [22]
+        "八月": [22, 23]
     };
 
     const months = [
