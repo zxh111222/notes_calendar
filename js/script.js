@@ -21,9 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "四月": [10, 12, 14, 17, 19]
     };
 
-    const highlightDatesWeb2 = {
+    const highlightDatesWeb2_1 = {
         "八月": [22, 23]
     };
+
+    const highlightDatesWeb2_2 = {
+        "九月": [2]
+    };
+
 
     const months = [
         { name: "一月", days: 31 },
@@ -64,15 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     const highlight = highlightDates[monthName] && highlightDates[monthName].includes(date);
                     const greenHighlight = greenHighlightDates[monthName] && greenHighlightDates[monthName].includes(date);
                     const highlight_web1 = highlightDatesWeb1[monthName] && highlightDatesWeb1[monthName].includes(date);
-                    const highlight_web2 = highlightDatesWeb2[monthName] && highlightDatesWeb2[monthName].includes(date);
+                    const highlight_web2_1 = highlightDatesWeb2_1[monthName] && highlightDatesWeb2_1[monthName].includes(date);
+                    const highlight_web2_2 = highlightDatesWeb2_2[monthName] && highlightDatesWeb2_2[monthName].includes(date);
                     const isAfterAug5 = fullDate >= new Date(2024, 7, 5); // 比较日期是否在2024年8月5日之后（包括当日）
 
-                    if (highlight || greenHighlight || highlight_web1 || highlightDatesWeb2) {
+                    if (highlight || greenHighlight || highlight_web1 || highlight_web2_1 || highlight_web2_2) {
                         let link;
                         if (highlight_web1) {
                             link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
-                        } else if (highlight_web2){
+                        } else if (highlight_web2_1){
                             link = `https://github.com/zxh111222/web2-myserver/tree/main/src/main/java/day${year}${month}${day}` + '/md';
+                        }  else if (highlight_web2_2){
+                            link = `https://github.com/zxh111222/web2/tree/main/web/day${year}${month}${day}` + '/md';
                         } else {
                             if (isAfterAug5) {
                                 link = `https://github.com/zxh111222/JavaProject-maven/tree/main/src/main/java/day${year}${month}${day}`;
@@ -101,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             cell.addEventListener('click', () => {
                                 window.open(link, '_blank');
                             });
-                        } else if (highlight_web2) {
+                        } else if (highlight_web2_1 || highlight_web2_2) {
                             cell.classList.add('web2-highlight');
                             cell.addEventListener('click', () => {
                                 window.open(link, '_blank');
