@@ -2,18 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const highlightDates = {
         "三月": [21, 22, 24],
         "四月": [20, 24],
-        "五月": [8, 10, 15, 12, 22, 25, 31],
-        "六月": [2, 5],
+        "五月": [8, 10, 15, 12, 22, 25, 24, 29, 31],
+        "六月": [2, 5, 7],
         "七月": [29, 30],
         "八月": [1, 2, 5, 6, 8, 9, 10, 12, 13, 15, 16, 19, 20],
         // 添加其他月份的有md笔记的日期
-    };
-
-    const greenHighlightDates = {
-        "五月": [24, 29],
-        "六月": [7],
-        "八月": [],
-        // 添加其他月份的绿色有上课日期
     };
 
     const highlightDatesWeb1 = {
@@ -67,13 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const fullDate = new Date(year, monthIndex, date);
 
                     const highlight = highlightDates[monthName] && highlightDates[monthName].includes(date);
-                    const greenHighlight = greenHighlightDates[monthName] && greenHighlightDates[monthName].includes(date);
                     const highlight_web1 = highlightDatesWeb1[monthName] && highlightDatesWeb1[monthName].includes(date);
                     const highlight_web2_1 = highlightDatesWeb2_1[monthName] && highlightDatesWeb2_1[monthName].includes(date);
                     const highlight_web2_2 = highlightDatesWeb2_2[monthName] && highlightDatesWeb2_2[monthName].includes(date);
                     const isAfterAug5 = fullDate >= new Date(2024, 7, 5); // 比较日期是否在2024年8月5日之后（包括当日）
 
-                    if (highlight || greenHighlight || highlight_web1 || highlight_web2_1 || highlight_web2_2) {
+                    if (highlight || highlight_web1 || highlight_web2_1 || highlight_web2_2) {
                         let link;
                         if (highlight_web1) {
                             link = `https://github.com/zxh111222/web1/tree/main/day${year}${month}${day}` + '/note';
@@ -96,11 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         if (highlight) {
                             cell.classList.add('highlight');
-                            cell.addEventListener('click', () => {
-                                window.open(link, '_blank');
-                            });
-                        } else if (greenHighlight) {
-                            cell.classList.add('green-highlight');
                             cell.addEventListener('click', () => {
                                 window.open(link, '_blank');
                             });

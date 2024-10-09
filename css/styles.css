@@ -50,17 +50,6 @@ highlight:hover {
     background-color: #fdd835;
 }
 
-.green-highlight {
-    background-color: rgb(107, 201, 107);
-    cursor: pointer;
-    color: white;
-}
-
-.green-highlight:hover {
-    background-color: rgb(76, 185, 76);
-    cursor: pointer;
-    color: white;
-}
 
 .web1-highlight, .web2-highlight{
     background-color: gray;
