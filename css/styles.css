@@ -51,11 +51,20 @@ highlight:hover {
 }
 
 
-.web1-highlight, .web2-highlight{
-    background-color: gray;
+.web1-highlight {
+    background-color: darkseagreen;
     cursor: pointer;
 }
 
-.web1-highlight:hover, .web2-highlight:hover {
-    background-color: dimgray;
+.web1-highlight:hover {
+    background-color: seagreen;
+}
+
+.web2-highlight{
+    background-color: seagreen;
+    cursor: pointer;
+}
+
+.web2-highlight:hover {
+    background-color: darkseagreen;
 }
