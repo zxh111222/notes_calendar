@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const highlightDatesWeb2_2 = {
-        "九月": [2, 4, 8, 9, 11, 18, 23, 25]
+        "九月": [2, 4, 8, 9, 11, 18, 21, 23, 25]
     };
 
 
