@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const highlightDatesWeb2_2 = {
         "九月": [2, 4, 8, 9, 11, 18, 21, 23, 25, 30],
-        "十月": [9, 14, 16, 20, 21, 23, 27]
+        "十月": [9, 14, 16, 20, 21, 23, 27],
+        "十一月": [3, 4, 6, 10]
     };
 
 
